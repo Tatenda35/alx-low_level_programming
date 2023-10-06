@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - main block 
+ * main - main block
  * Description: an algorithm that assigns random variable n.
  * Return: 0
  */
