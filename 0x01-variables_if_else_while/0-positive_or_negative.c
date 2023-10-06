@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* 
+/** 
  * main - main block executed
  * Description- an algorithm that assigns random variable n
  * and prints output if positive, zero or negative
