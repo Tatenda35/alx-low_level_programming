@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
-
 /* 
  * main - main block executed
  * Description- an algorithm that assigns random variable n
