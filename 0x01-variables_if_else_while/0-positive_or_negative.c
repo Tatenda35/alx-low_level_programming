@@ -3,7 +3,13 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/* 
+ * main - main block executed
+ * Description- an algorithm that assigns random variable n
+ * and prints output if positive, zero or negative
+ * Return (0)
+ */
+
 int main(void)
 {
 	int n;
