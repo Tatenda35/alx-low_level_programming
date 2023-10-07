@@ -1,7 +1,9 @@
 #include <stdio.h>
 /*
- * main - main function
- * Description: This algorithim prints the alphabet without using printf.
+ * main - Entry point fot the program.
+ * Description:
+ * This algorithim prints the alphabet without using printf.
+ * we use a for loop.
  * return: 0
  */
 int main(void)
