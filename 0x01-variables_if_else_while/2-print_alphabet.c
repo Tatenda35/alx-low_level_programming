@@ -1,10 +1,12 @@
 #include <stdio.h>
-/*
+/**
  * main - Entry point fot the program.
  * Description:
  * This algorithim prints the alphabet without using printf.
  * we use a for loop.
- * return: 0
+ *
+ * return:
+ * 0 - means successful execution.
  */
 int main(void)
 {
