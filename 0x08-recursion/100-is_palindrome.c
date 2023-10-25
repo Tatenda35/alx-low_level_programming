@@ -1,50 +1,46 @@
 #include "main.h"
+/**
+ * _strlen - Returns the length of a string.
+ * @s: String.
+ * Return: Length of a string.
+ **/
+int _strlen(char *s)
+{
+	return (*s ? (1 + _strlen(s + 1)) : 0);
+}
+
 
 /**
- * is_palindrome - check if a string is a palindrome
- * @s: char array string
- * Return: 1 if palindrome, 0 if not
- */
+ * compare_letters - Compare a string (First letter and the last)
+ * @s: String
+ * @len: Size of the string
+ * @i: Position of the string
+ * Return: Returns 1 if a string is a palindrome and 0 if not
+ **/
+int compare_letters(char *s, int len, int i)
+{
+	if (i < len)
+	{
+		if (*(s + i)  == *(s + len))
+			return (compare_letters(s, len - 1, i + 1));
+		else if (*(s + i) != *(s + len))
+			return (0);
+		else
+			return (1);
+	}
 
+	return (1);
+}
+
+/**
+ * is_palindrome - Sequence of characters which reads the same
+ * backward as forward
+ * @s: String
+ * Return: Returns 1 if a string is a palindrome and 0 if not
+ **/
 int is_palindrome(char *s)
 {
-	int length;
+	int size = _strlen(s) - 1;
 
-	length = get_length(s) - 1;
-
-	return (my_pal(s, --length));
-}
-
-/**
- * get_length - gets length of string
- * @s: string
- * Return: return length of string
- */
-
-int get_length(char *s)
-{
-	if (*s == '\0')
-		return (1);
-	else
-		return (1 + get_length(++s));
-}
-
-/**
- * my_pal - recursive check of palindrome
- * @s: string
- * @l: length of string
- * Return: 1 if palindrome, 0 if not
- */
-
-int my_pal(char *s, int l)
-{
-	if (*s == *(s + l))
-	{
-		if (l <= 0)
-			return (1);
-		else
-			return (my_pal(++s, l - 2));
-	}
-	else
-		return (0);
+	return (compare_letters(s, size, 0));
 }
